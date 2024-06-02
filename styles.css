@@ -1,0 +1,44 @@
+body {
+	margin: 0;
+	background-color: black;
+	background-size: cover;
+	background-repeat: no-repeat;
+	font-family: Montserrat;
+  }
+  
+  * {
+	box-sizing: border-box;
+  }
+
+    /*Navigation*/
+
+.header_logo{
+    color: white;
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+    margin-top: 40px;
+}
+
+.nav{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.navigation_link{
+    box-sizing: border-box;
+    padding-right: 40px;
+    padding-top: 20px;
+    display: inline-block;
+	margin: 0 10px;
+	color: #ffffff;
+	text-decoration: none; 
+    -webkit-transition: all 0.5s ease;
+          transition: all 0.5s ease; 
+}
+
+.navigation_link:hover{
+    color: yellow; /* Меняем цвет текста */
+  }
+
+    /*Navigation*/
