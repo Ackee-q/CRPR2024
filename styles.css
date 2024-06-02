@@ -4,41 +4,470 @@ body {
 	background-size: cover;
 	background-repeat: no-repeat;
 	font-family: Montserrat;
+	scroll-behavior: smooth
+	
   }
   
   * {
 	box-sizing: border-box;
   }
-
-    /*Navigation*/
-
-.header_logo{
-    color: white;
-    display: flex;
-    justify-content: flex-start;
-    position: relative;
-    margin-top: 40px;
-}
-
-.nav{
-    display: flex;
-    justify-content: flex-end;
-}
-
-.navigation_link{
-    box-sizing: border-box;
-    padding-right: 40px;
-    padding-top: 20px;
-    display: inline-block;
+  
+  .colortext {
+	color: red;
+  }
+  
+  .container {
+	width: 100%;
+	max-width: 1200px;
+	height: 865px;
+	margin: 0 auto;
+  }
+  
+  .intro {
+	flex-direction: column;
+	justify-content: center;
+	width: 100%;
+	height: 100vh;
+  }
+  
+  .intro___title {
+	margin-left: -100px;
+	text-align: center;
+	font-size: 150px;
+	font-weight: 700; 
+	text-transform: uppercase;
+	line-height: 1;
+	width: 1150px;
+	color: yellow;
+	white-space: nowrap;
+	overflow: hidden;
+	border-right: 3px solid yellow;
+	animation: cursor 0.75s step-end infinite, printed_text 2s steps(29);
+  }
+  
+  @keyframes cursor {
+	0% { border-color: yellow; }
+	50% { border-color: transparent; }
+	100% { border-color: yellow; }
+  }
+  
+  @keyframes printed_text {
+	from { width: 0; }
+  }
+  
+  .intro___title::after {
+	content: "";
+	display: block;
+	width: 60px;
+	height: 3px;
+	margin: 60px auto 0;
+	color: #fff;
+  }
+  
+  .intro___inner {
+	color: #fff;
+	width: 100%;
+	max-width: 880px;
+	margin: 0 auto;
+  }
+  
+  .sub_title {
+	color: white;
+	text-align: center;
+	margin-bottom: 10%;
+  }
+  
+  .intro___suptitle {
+	display: flex;
+	justify-content: center;
+	margin-top: 150px;
+	font-size: 72px;
+	color: #fff;
+	font-family: "Kaushan Script", cursive;  
+  }
+  
+  .history {
+	text-align: center;
+	margin-bottom: 100px;
+  }
+  
+  .header {
+	padding-top: 30px;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 1000;
+  }
+  
+  .header___inner {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+  }
+  
+  .header___logo {
+	font-size: 30px;
+	font-weight: 700;
+	color: white;
+  }
+  
+  .nav {
+	font-size: 14px;
+	text-transform: uppercase;
+  }
+  
+  .nav___link {
+	display: inline-block;
+	vertical-align: top;
 	margin: 0 10px;
-	color: #ffffff;
-	text-decoration: none; 
-    -webkit-transition: all 0.5s ease;
-          transition: all 0.5s ease; 
+	color: #fff;
+	text-decoration: none;  
+	-webkit-transition: all 0.5s ease;
+	transition: all 0.5s ease; 
+  }
+  
+  .nav___link:hover {
+	color: red;
+  }
+  
+  /* Button */
+  .btn {
+	margin-left: 45%;
+	vertical-align: top;
+	padding: 10px 15px;
+	border: 3px solid red;
+  }
+  
+  .intro_2 {
+	background-color: #fff;
+	width: 100%;
+	height: 1200px;
+	margin: 0 auto;
+  }
+  
+  #title_2 {
+	display: flex;
+	justify-content: center;
+	padding-top: 30px;
+	font-family: "Kaushan Script", cursive;
+	font-size: 30px;
+	text-align: center;
+  }
+  
+  .title_3 {
+
+	display: flex;
+	justify-content: center;
+	font-family: Montserrat;
+	font-size: 60px;
+	text-align: center;
+	line-height: -2000px;
+  }
+  
+  .line {
+	margin-left: 45%;
+	margin-bottom: 2%;
+	width: 200px;
+	height: 5px;
+	background-color: red;
+  }
+  
+  .description {
+	text-align: center;
+	color: white;
+  }
+  
+  .block_image {
+	display: flex;
+	justify-content: space-between;
+	width: 1200px;
+	margin: 0 auto;
+  }
+  
+  .block1 {
+	background-color: red;
+	width: 300px;
+	height: 300px;
+	transition: filter 0.5s ease;
+  }
+  
+  .block1:hover {
+
+	filter: drop-shadow(0 0 20px rgb(255, 0, 0));
 }
 
-.navigation_link:hover{
-    color: yellow; /* Меняем цвет текста */
+  .block1 img {
+	width: 100%;
+	height: 100%;
+  }
+  
+  .photo {
+	background-image: image-set('images/cdpr.jpg');
+	width: 300px;
+	height: 300px;
   }
 
-    /*Navigation*/
+  #photo_dickr{
+	margin-top: 5px;
+	display: flex;
+	justify-content: center;
+	font-weight: bold;
+	gap: 400px;
+	text-transform: uppercase;
+  }
+  
+  .panel {
+	width: 100%;
+  }
+  
+  .sub_block.new_dex {
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-image: url(../img/last.png);
+	height: 300px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  }
+  
+  .sub_block.new_dex .form_sub {
+	background-color: rgba(0, 0, 0, 0.902);
+	width: 670px;
+	height: 327px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+  }
+  
+  .sub_block.new_dex .form_sub .title {
+	text-align: center;
+	font-size: 26px;
+	color: yellow;
+	line-height: 1.875;
+  }
+  
+  .sub_block.new_dex .form_sub .inputs {
+	display: flex;
+	text-align: center;
+	width: 100%;
+	justify-content: space-around;
+	align-items: center;
+  }
+  
+  .sub_block.new_dex .form_sub .inputs input {
+	border-style: solid;
+	border-width: 1px;
+	border-color: rgb(255, 247, 244);
+	border-radius: 22px;
+	background-color: rgba(0, 0, 0, 0.2);
+	width: 251px;
+	height: 30px;
+	outline: none;
+	color: #fff;
+	padding: 10px;
+  }
+  
+  .sub_block.new_dex .form_sub button {
+	border-radius: 40px;
+	background-color: red;
+	box-shadow: 0px 6px 40px 0px red;
+	margin-top: 50px;
+	width: 350px;
+	height: 55px;
+	color: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: none;
+	text-transform: uppercase;
+	cursor: pointer;
+  }
+  
+  .footer_desc {
+	color: white;
+	font-size: 14px;
+	text-align: center;
+	padding-bottom: 2%;
+  }
+  
+  /* Media Queries */
+  @media (max-width: 1200px) {
+	.container {
+	  max-width: 100%;
+	}
+  
+	.block_image {
+	  flex-direction: column;
+	  align-items: center;
+	}
+  
+	.block1, .photo {
+	  width: 80%;
+	  height: auto;
+	  margin-bottom: 20px;
+	}
+  
+	.intro___title {
+	  font-size: 120px;
+	  width: auto;
+	}
+  
+	.intro___suptitle {
+	  font-size: 48px;
+	  margin-top: 50px;
+	}
+  }
+  
+  @media (max-width: 768px) {
+	.intro___title {
+	  font-size: 80px;
+	}
+  
+	.intro___suptitle {
+	  font-size: 36px;
+	}
+  
+	.btn {
+	  margin-left: auto;
+	  margin-right: auto;
+	}
+  
+	.header___logo {
+	  font-size: 24px;
+	}
+  
+	.nav {
+	  font-size: 12px;
+	}
+  
+	.title_3 {
+	  font-size: 48px;
+	}
+  }
+  
+  @media (max-width: 480px) {
+	.intro___title {
+	  font-size: 60px;
+	}
+  
+	.intro___suptitle {
+	  font-size: 24px;
+	}
+  
+	.header___inner {
+	  flex-direction: column;
+	  align-items: center;
+	}
+  
+	.nav___link {
+	  display: block;
+	  margin: 5px 0;
+	}
+  
+	.btn {
+	  padding: 5px 10px;
+	}
+  
+	.title_3 {
+	  font-size: 36px;
+	}
+  }
+  
+.description_about_us{
+	color: rgb(0, 0, 0);
+	display: flex;
+	justify-content: center;
+	gap: 155px;
+}
+
+.info_us{
+	font-family: Montserrat;
+	width: 300px; 
+   	text-align: justify;
+    padding: 10px;
+    box-sizing: border-box; 
+    overflow: hidden; 
+    word-wrap: break-word; 
+    overflow-wrap: break-word; 
+}
+
+.intro_3{
+	background-color: #000000;
+	width: 100%;
+	height: 1200px;
+	max-width: 900px;
+	margin: 0 auto;
+}
+
+#bt3{
+	display: flex;
+	justify-content: center;
+	padding-top: 30px;
+	font-family: "Kaushan Script", cursive;
+	font-size: 30px;
+	text-align: center;
+	color: white;
+}
+
+.big_title_3{
+	display: flex;
+	justify-content: center;
+	font-family: Montserrat;
+	padding-top: 25px;
+	font-size: 60px;
+	text-align: center;
+	color: white;
+}
+
+.cadrs{
+	color: white;
+	text-align: center;
+	margin-bottom: 10%;
+}
+
+.options{
+	display: flex;
+}
+
+.colortext2{
+	color: yellow;
+}
+
+.text_shotgun{
+	padding-top: 80px;
+	color: white;
+	padding-left: 40px;
+	font-family: Montserrat;
+	width: 450px; 
+   	text-align: center;
+    padding: 0 auto;
+    box-sizing: border-box; 
+    overflow: hidden; 
+    word-wrap: break-word; 
+    overflow-wrap: break-word; 
+
+}
+
+.shot_title{
+	color: yellow;
+}
+
+.text_h1{
+	display: flex;
+	justify-content: center;
+	color: yellow;
+}
+
+#contact_id{
+	color: white;
+	text-align: justify;
+}
+
+#row{
+	font-size: 40px;
+	text-align: center;
+	color: yellow;
+}
